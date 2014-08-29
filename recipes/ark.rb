@@ -53,7 +53,8 @@ init_script = template tomcat_version do
   variables( :name => tomcat_version)
 end
 
-service tomcat_version do
+service "tomcat" do
+  service_name tomcat_version
   supports :restart => true, :reload => true, :status => true
   action [:enable, :start]
 end

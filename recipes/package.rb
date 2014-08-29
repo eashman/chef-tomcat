@@ -49,8 +49,7 @@ tomcat_pkgs.each do |pkg|
 end
 
 service "tomcat" do
-  # application_java assumes 'tomcat' as a service name.
-  #service_name "tomcat#{version}"
+  service_name "tomcat#{version}"
   supports :restart => true, :reload => true, :status => true
   action [:enable, :start]
 end

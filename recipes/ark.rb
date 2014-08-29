@@ -65,6 +65,6 @@ template "/etc/default/#{tomcat_version}" do
   group "root"
   variables(:tomcat => node['tomcat'].to_hash)
   mode "0644"
-  notifies :restart, "service[#{tomcat_version}]", :immediately
+  notifies :restart, "service[tomcat]", :immediately
 end
 

@@ -40,7 +40,7 @@
 
     ]
   },
-  "name": "tomcat",
+  "name": "chef-tomcat",
   "version": "0.10.3",
   "conflicting": {
   },
